@@ -3,7 +3,7 @@ import path from 'path';
 
 const app = process.type === 'renderer' ? electron.remote.app : electron.app;
 
-export const CHECK_INTERVAL = 1000 * 3600; // How often should we perform checks
+export const CHECK_INTERVAL = 2000 * 3600; // How often should we perform checks
 export const LOCAL_API = 'http://localhost:3000';
 export const DEV_API = 'https://dev.franzinfra.com';
 export const LIVE_API = 'https://api.franzinfra.com';

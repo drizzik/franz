@@ -8,14 +8,6 @@ import Tabbar from '../services/tabs/Tabbar';
 import { ctrlKey } from '../../environment';
 
 const messages = defineMessages({
-  settings: {
-    id: 'sidebar.settings',
-    defaultMessage: '!!!Settings',
-  },
-  addNewService: {
-    id: 'sidebar.addNewService',
-    defaultMessage: '!!!Add new service',
-  },
   mute: {
     id: 'sidebar.muteApp',
     defaultMessage: '!!!Disable notifications & audio',
@@ -23,7 +15,7 @@ const messages = defineMessages({
   unmute: {
     id: 'sidebar.unmuteApp',
     defaultMessage: '!!!Enable notifications & audio',
-  },
+  }
 });
 
 @observer
@@ -72,23 +64,7 @@ export default class Sidebar extends Component {
         >
           <i className={`mdi mdi-bell${isAppMuted ? '-off' : ''}`} />
         </button>
-        <button
-          onClick={() => openSettings({ path: 'recipes' })}
-          className="sidebar__button sidebar__button--new-service"
-          data-tip={`${intl.formatMessage(messages.addNewService)} (${ctrlKey}+N)`}
-        >
-          <i className="mdi mdi-plus-box" />
-        </button>
-        <button
-          onClick={() => openSettings({ path: 'app' })}
-          className="sidebar__button sidebar__button--settings"
-          data-tip={`${intl.formatMessage(messages.settings)} (${ctrlKey}+,)`}
-        >
-          <i className="mdi mdi-settings" />
-        </button>
-        {this.state.tooltipEnabled && (
-          <ReactTooltip place="right" type="dark" effect="solid" />
-        )}
+
       </div>
     );
   }

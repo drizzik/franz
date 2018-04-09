@@ -42,9 +42,9 @@ html {
 
 .sidebar {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
-  width: $theme-sidebar-width;
+  width: 50px;
   background: $theme-gray-lightest;
   box-shadow: 1px 0 10px rgba(0,0,0,0.08);
   z-index: 200;
